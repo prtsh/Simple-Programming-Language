@@ -135,7 +135,6 @@ def p_ifElseStart(p):
     # If current state is not running
     if not stack[-1]:
         stack.append(False)
-    # Push not(evaluated value) as running state
     else:
         stack.append(not p[-9])
 
@@ -178,14 +177,15 @@ def p_boolexpr_andornot(p):
     
     global error_semantic
     try:
-        if len(p) == 3 and p[1] is not None and p[3] is not None:
+        if p[1] == 'not' and p[2] is not None:
+                p[0] = not p[2]
+        elif p[1] is not None and p[3] is not None:
             if p[2] == 'andalso':
                 p[0] = p[1] and p[3]
             elif p[2] == 'orelse':
                 p[0] = p[1] or p[3]
-
-        if len(p) == 2 and p[1] == 'not' and p[2] is not None:
-            p[0] = not p[2]
+        else:
+            pass
     except:
             pass;
             
@@ -263,18 +263,6 @@ def p_expr_binop(p):
     except:
                 pass;
 
-def p_boolexpr_ID(p):
-    """
-    boolexpr : ID
-    """
-    global error_semantic
-    if not stack[-1]:
-        return
-
-    if p[1] == True or p[1] == False: 
-        return p[1]
-    else:
-        pass
         
 def p_expr_boolexpr(p):
     """
@@ -479,7 +467,7 @@ def p_expr_tupleindex(p):
 def p_expr_or_empty(p):
     """
     expr_or_empty : expr
-                  |
+                  | empty
     """
     if not stack[-1]:
         return
@@ -487,6 +475,10 @@ def p_expr_or_empty(p):
     if len(p) == 2:
         p[0] = p[1]  
 
+def p_empty(p):
+     'empty :'
+     pass
+ 
 def p_error(p):
     global error_semantic;
     error_semantic = 1;

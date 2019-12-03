@@ -1,0 +1,28 @@
+{
+    array = [2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6, -3, 100, 27];
+    size = 15;
+    i = 1;
+
+    while(i < size) {
+
+        key = array[i];
+        j = i - 1;  
+
+        if (j >= 0) { temp = array[j] > key; }
+        else { temp = False; }
+
+        while (j >= 0 andalso temp) {
+
+            array[j + 1] = array[j];  
+            j = j - 1;
+
+            if (j >= 0) { temp = array[j] > key; }
+            else { temp = False; }
+        }  
+
+        array[j + 1] = key;  
+        i = i + 1;
+    }
+
+    print(array);
+} 

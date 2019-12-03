@@ -35,10 +35,24 @@ def getsymbol(p, i):
     else:
         return symbol_val
 
-def boolexpr(expr):
-    if expr == True:
+def boolexprid(val):
+    if type(val) == int and val != 0:
         return True
-    return False;
+    return False
+
+def boolexpr(expr):
+    if expr is None:
+        return None
+
+    if  type(expr) is str and len(expr) > 0:
+        return True
+    else:
+        return False
+    
+    if expr == True or expr != 0:
+        return True
+    else:
+        return False;
 
 precedence = (
     ('right', 'ASSIGN'),
@@ -169,8 +183,9 @@ def p_whileEnd(p):
 def p_boolexpr_andornot(p):
     '''
         boolexpr :   NOT boolexpr
-                   | boolexpr ANDALSO boolexpr
-                   | boolexpr ORELSE boolexpr
+                   | NOT expr
+                   | expr ANDALSO expr
+                   | expr ORELSE expr
     '''
     if not stack[-1]:
         return
@@ -269,10 +284,10 @@ def p_expr_boolexpr(p):
     expr : boolexpr
     """
     global error_semantic
+    result = boolexpr(p[1])
+    p[0] = result;
+    return p[1]
 
-    if p[1] == True or p[1] == False: 
-        return p[1]
-      
 def p_expr_id(p):
     """
     expr : ID
@@ -286,6 +301,22 @@ def p_expr_id(p):
     if symbol is not None:
         p[0] = symbol
 
+def p_boolexpr_id(p):
+    """
+    boolexpr : ID
+    """
+    if not stack[-1]:
+        return
+
+    # Get symbol's value
+    symbol = getsymbol(p, 1)
+    # If symbol does not exist
+    if symbol is not None and symbol != 0:
+        p[0] = True
+    else:
+        p[0] = False
+
+
 def p_expr(p):
     '''
     expr : INT
@@ -296,33 +327,11 @@ def p_expr(p):
     '''
     p[0] = p[1]
 
-def p_expr_ID_assign_expr(p):
-    """
-    expr : ID ASSIGN expr
-    """
-    if not stack[-1]:
-        return
-
-    if p[3] is not None:
-        variable[p[1]] = p[3]
-        p[0] = p[3]
-
-def p_expr_assign_expr(p):
-    """
-    expr : expr ASSIGN expr
-    """
-    if not stack[-1]:
-        return
-
-    if p[3] is not None:
-        p[1] = p[3]
-        p[0] = p[3]
-
 def p_expr_string(p):
     '''
     expr : STRING
     '''
-    p[0] = p[1]#p[1][1:-1]
+    p[0] = p[1][1:-1]
 
 def p_expr_paran(p):
     """
@@ -464,6 +473,31 @@ def p_expr_tupleindex(p):
     except:
         pass
 
+def p_expr_ID_assign_expr(p):
+    """
+    expr :  ID ASSIGN expr
+          | ID ASSIGN expr SEMI
+    """
+    if not stack[-1]:
+        return
+
+    if p[3] is not None:
+        variable[p[1]] = p[3]
+        p[0] = p[3]
+
+def p_expr_assign_expr(p):
+    """
+    expr : expr ASSIGN expr
+          | expr ASSIGN expr SEMI
+    """
+    if not stack[-1]:
+        return
+
+    if p[3] is not None:
+        p[1] = p[3]
+        p[0] = p[3]
+
+
 def p_expr_or_empty(p):
     """
     expr_or_empty : expr
@@ -474,9 +508,11 @@ def p_expr_or_empty(p):
 
     if len(p) == 2:
         p[0] = p[1]  
-
+   
 def p_empty(p):
-     'empty :'
+     '''
+     empty :
+     '''
      pass
  
 def p_error(p):

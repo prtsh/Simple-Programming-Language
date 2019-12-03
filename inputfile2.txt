@@ -8,7 +8,8 @@
         {       
             isPrime = 0;     
         }     
-        i = i + 1;   
+        i = i + 1;  
+        print(i); 
     }   
     
     if(isPrime == 1)

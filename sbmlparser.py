@@ -26,9 +26,9 @@ variable = {};
 stack = [True];
 
 # Get's a symbol from variables dictionary and shows error if not exists
-def getsymbol(p, i):
+def getval( index):
     # Get symbol's value form variables dictionary
-    symbol_val = variable.get(p[i], None)
+    symbol_val = variable.get(index, None)
     if symbol_val is None:
        #pass;
        return
@@ -44,15 +44,16 @@ def boolexpr(expr):
     if expr is None:
         return None
 
-    if  type(expr) is str and len(expr) > 0:
+    if type(expr) is str:
+        if len(expr) > 0:
+            return True
+        else:
+            return False
+
+    if expr != 0:
         return True
     else:
         return False
-    
-    if expr == True or expr != 0:
-        return True
-    else:
-        return False;
 
 precedence = (
     ('right', 'ASSIGN'),
@@ -60,7 +61,7 @@ precedence = (
     ('left','ANDALSO'),
     ('left','NOT'),
     ('left','LESSTHAN', 'LESSEQUAL', 'EQUAL', 'NOTEQUAL', 'GREATEREQUAL', 'GREATER'),
-    ('right', 'CONS'),
+    ('right', 'CONS', 'IN'),
     ('right','UMINUS'),
     ('left', 'PLUS', 'MINUS'),
     ('left', 'MUL', 'DIV', 'INTDIV', 'MOD'),
@@ -248,7 +249,6 @@ def p_boolexpr_comparison(p):
     except:
             pass
 
-        
 def p_expr_binop(p):
     '''
     expr :           expr PLUS expr
@@ -277,7 +277,6 @@ def p_expr_binop(p):
                     p[0] = int(p[1]/p[3])
     except:
                 pass;
-
         
 def p_expr_boolexpr(p):
     """
@@ -296,7 +295,7 @@ def p_expr_id(p):
         return
 
     # Get symbol's value
-    symbol = getsymbol(p, 1)
+    symbol = getval(p[1])
     # If symbol does not exist
     if symbol is not None:
         p[0] = symbol
@@ -309,13 +308,12 @@ def p_boolexpr_id(p):
         return
 
     # Get symbol's value
-    symbol = getsymbol(p, 1)
+    symbol = getval(p[1])
     # If symbol does not exist
     if symbol is not None and symbol != 0:
         p[0] = True
     else:
         p[0] = False
-
 
 def p_expr(p):
     '''
@@ -401,7 +399,7 @@ def p_expr_listindex(p):
         
     try:
         if p[3] > len(p[1]):
-            pass
+    
             return;
         
         if isinstance(p[1], str) == False and isinstance(p[1], list) == False \
@@ -411,24 +409,6 @@ def p_expr_listindex(p):
             p[0] = p[1][p[3]];
     except:
         pass;
-
-def p_expr_listindexid(p):
-    '''
-     expr : expr LBRACKET ID RBRACKET
-    '''
-    global error_semantic
-    if p[1] is None or p[2] is None:
-            pass
-            return
-        
-    p[0] = p[1][variable[p[3]]];
-
-def p_expr_linear(p):
-    '''
-    expr : plist
-         | ptuple
-    '''
-    p[0] = p[1]
 
 def p_expr_membership(p):
    '''
@@ -473,6 +453,7 @@ def p_expr_tupleindex(p):
     except:
         pass
 
+
 def p_expr_ID_assign_expr(p):
     """
     expr :  ID ASSIGN expr
@@ -508,7 +489,14 @@ def p_expr_or_empty(p):
 
     if len(p) == 2:
         p[0] = p[1]  
-   
+
+def p_expr_linear(p):
+    '''
+    expr : plist
+         | ptuple
+    '''
+    p[0] = p[1]
+
 def p_empty(p):
      '''
      empty :

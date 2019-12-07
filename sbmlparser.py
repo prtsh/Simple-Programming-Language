@@ -25,21 +25,6 @@ log = logging.getLogger()
 variable = {};
 stack = [True];
 
-# Get's a symbol from variables dictionary and shows error if not exists
-def getval( index):
-    # Get symbol's value form variables dictionary
-    symbol_val = variable.get(index, None)
-    if symbol_val is None:
-       #pass;
-       return
-    else:
-        return symbol_val
-
-def boolexprid(val):
-    if type(val) == int and val != 0:
-        return True
-    return False
-
 def boolexpr(expr):
     if expr is None:
         return None
@@ -66,6 +51,7 @@ precedence = (
     ('left', 'PLUS', 'MINUS'),
     ('left', 'MUL', 'DIV', 'INTDIV', 'MOD'),
     ('right', 'EXPONENT'),
+    #('right', 'LBRACKET','RBRACKET'),
     )
 
 # Program's starting point
@@ -90,7 +76,7 @@ def p_print_stmt(p):
     stmt : PRINT LPAREN print_arguments RPAREN SEMI
     """
     if not stack[-1]:
-        return
+            return
 
     if p[3] is not None:
         print(p[3])
@@ -164,10 +150,8 @@ def p_whileStart(p):
     whileStart :
     """
     global stack
-    # If current state is not running
     if not stack[-1]:
         stack.append(False)
-    # Push evaluated value as running state
     else:
         stack.append(p[-3])
 
@@ -177,7 +161,6 @@ def p_whileEnd(p):
     """
     global stack
     stack.pop()
-
     if stack[-1] and p[-5]:
         p.lexer.lexpos = parser.symstack[-7].lexpos
 
@@ -207,9 +190,7 @@ def p_boolexpr_andornot(p):
             
 def p_boolexpr_paran(p):
     """
-    boolexpr : LPAREN boolexpr RPAREN
-              | LCURLY boolexpr RCURLY
-              | LBRACKET boolexpr RBRACKET
+    boolexpr :  LPAREN boolexpr RPAREN
     """
     if not stack[-1]:
         return
@@ -221,6 +202,8 @@ def p_boolexpr_bool(p):
     '''
     boolexpr : BOOL
     '''
+    if not stack[-1]:
+            return
     p[0] = p[1]
         
 def p_boolexpr_comparison(p):
@@ -232,22 +215,34 @@ def p_boolexpr_comparison(p):
                | expr GREATEREQUAL expr
                | expr GREATER expr
     '''
-    global error_semantic
+    if not stack[-1]:
+            return
+        
+    if p[1] is None or p[3] is None:
+        p[0] = None
+        return
+    
     try:
-            if  p[2] == '<':
-                p[0] = p[1] < p[2]
-            elif p[2] == '<=':
-                p[0] = p[1] <= p[2]
-            elif p[2] == '==':
-                p[0] = p[1] == p[3]
-            elif p[2] == '<>':
-                p[0] = p[1] != p[3]
-            elif p[2] == '>=':
-                p[0] = p[1] >= p[3]
-            elif p[2] == '>':
-                p[0] = p[1] > p[3]
-    except:
-            pass
+        #print(p[1], p[3])
+        if  p[2] == '<':
+            p[0] = p[1] < p[3]
+        elif p[2] == '<=':
+            p[0] = p[1] <= p[3]
+        elif p[2] == '==':
+            p[0] = p[1] == p[3]
+        elif p[2] == '<>':
+            p[0] = p[1] != p[3]
+        elif p[2] == '>=':
+            p[0] = p[1] >= p[3]
+        elif p[2] == '>':
+            p[0] = p[1] > p[3]
+        else:
+            p[0] = None
+    except Exception as e: 
+        #print(e);
+        #pass
+        global error_semantic
+        error_semantic = error_semantic + 1
 
 def p_expr_binop(p):
     '''
@@ -259,6 +254,8 @@ def p_expr_binop(p):
                    | expr INTDIV expr
                    | expr MOD expr  
     '''
+    if not stack[-1]:
+            return
     global error_semantic
     try:
                 if p[2] == '+':
@@ -275,13 +272,18 @@ def p_expr_binop(p):
                     p[0] = p[1] % p[3]
                 elif p[2] == 'div':
                     p[0] = int(p[1]/p[3])
-    except:
-                pass;
+    except Exception  as e:
+        #print(e)
+        global error_semantic
+        error_semantic = error_semantic + 1
         
 def p_expr_boolexpr(p):
     """
     expr : boolexpr
     """
+    if not stack[-1]:
+            return
+        
     global error_semantic
     result = boolexpr(p[1])
     p[0] = result;
@@ -292,28 +294,32 @@ def p_expr_id(p):
     expr : ID
     """
     if not stack[-1]:
-        return
-
-    # Get symbol's value
-    symbol = getval(p[1])
-    # If symbol does not exist
-    if symbol is not None:
-        p[0] = symbol
+            return
+        
+    global variable
+    value = variable.get(p[1])
+    #print(value)
+    if value is not None:
+        p[0] = value
+        return value
+    else:
+        return None
+    #print(p[1], value)
 
 def p_boolexpr_id(p):
     """
     boolexpr : ID
     """
     if not stack[-1]:
-        return
-
-    # Get symbol's value
-    symbol = getval(p[1])
-    # If symbol does not exist
-    if symbol is not None and symbol != 0:
+            return
+        
+    global variable
+    symbol_val = variable.get(p[1])
+    if symbol_val is not None and symbol_val != 0:
         p[0] = True
     else:
         p[0] = False
+    
 
 def p_expr(p):
     '''
@@ -323,24 +329,31 @@ def p_expr(p):
            | SEMI
            |
     '''
+    if not stack[-1]:
+            return
     p[0] = p[1]
-
+    
 def p_expr_string(p):
     '''
     expr : STRING
     '''
+    if not stack[-1]:
+            return
     p[0] = p[1][1:-1]
 
 def p_expr_paran(p):
     """
     expr : LPAREN expr RPAREN
     """
+    if not stack[-1]:
+            return
     p[0] = p[2]
     
 def p_expr_uminus(p):
     """
     expr : MINUS expr %prec UMINUS
     """
+    
     if not stack[-1]:
         return
 
@@ -352,6 +365,8 @@ def p_expr_list(p):
     plist  : LBRACKET RBRACKET
            | LBRACKET listitem RBRACKET
     '''
+    if not stack[-1]:
+            return
     if len(p) == 3:
         p[0] = []
 
@@ -363,6 +378,8 @@ def p_expr_listitem(p):
     listitem : listitem COMMA expr
             | expr
     '''
+    if not stack[-1]:
+            return
     if len(p) == 2:
         p[0] = [p[1]]
     else:
@@ -373,6 +390,8 @@ def p_expr_tuple(p):
     ptuple  : LPAREN RPAREN
             | LPAREN tupleitem RPAREN
     '''
+    if not stack[-1]:
+            return
     if len(p) == 3:
         p[0] = ()
 
@@ -384,55 +403,34 @@ def p_expr_tupleitem(p):
     tupleitem : tupleitem COMMA expr
             | expr
     '''
+    if not stack[-1]:
+            return
     if len(p) == 2:
         p[0] = (p[1],)
     else:
         p[0] = p[1] + (p[3],) 
 
-def p_expr_listindex(p):
-    '''
-    expr : expr LBRACKET expr RBRACKET
-    '''
-    global error_semantic
-    if p[1] is None or p[2] is None:
-            pass
-        
-    try:
-        if p[3] > len(p[1]):
-    
-            return;
-        
-        if isinstance(p[1], str) == False and isinstance(p[1], list) == False \
-            or isinstance(p[3], int) == False:
-            pass
-        else:
-            p[0] = p[1][p[3]];
-    except:
-        pass;
-
 def p_expr_membership(p):
    '''
    expr : expr IN expr
    ''' 
+   if not stack[-1]:
+            return
    global error_semantic
    try:
-       if isinstance(p[3], str) == False and isinstance(p[3], list) == False:
-           pass
-       else:    
-            try:
                 if p[1] in p[3]:
                     p[0] = True
                 else:
                     p[0] = False
-            except:
-                pass
    except:
-       pass
+       error_semantic = error_semantic + 1
 
 def p_expr_cons(p):
     '''
     expr : expr CONS expr
     '''
+    if not stack[-1]:
+            return
     global error_semantic
     try:
         if isinstance(p[3], list):
@@ -444,6 +442,8 @@ def p_expr_tupleindex(p):
     '''
     expr : TUPLINDEX INT expr 
     '''
+    if not stack[-1]:
+            return
     global error_semantic
     try:
         if isinstance(p[2], int) == False or isinstance(p[3], tuple) == False:
@@ -453,31 +453,108 @@ def p_expr_tupleindex(p):
     except:
         pass
 
-
 def p_expr_ID_assign_expr(p):
     """
     expr :  ID ASSIGN expr
           | ID ASSIGN expr SEMI
     """
     if not stack[-1]:
-        return
-
+            return 
+          
+    global variable
     if p[3] is not None:
         variable[p[1]] = p[3]
         p[0] = p[3]
-
-def p_expr_assign_expr(p):
+    
+def p_expr_list_assign_id(p):
     """
-    expr : expr ASSIGN expr
-          | expr ASSIGN expr SEMI
+    expr : ID LBRACKET expr RBRACKET ASSIGN ID
+    """
+    if not stack[-1]:
+            return
+    if p[3] is None or p[1] is None:
+        return
+    
+    global variable
+    
+    lval = variable.get(p[1])
+    rval = variable.get(p[6])
+    lval[p[3]] = rval;
+    variable[p[1]] = lval;
+    p[0] = rval
+
+def p_expr_list_assign_list(p):
+    """
+    expr : ID LBRACKET expr RBRACKET ASSIGN listval
+    """
+    if not stack[-1]:
+            return
+    if p[1] is None or p[3] is None or p[6] is None:
+        return 
+    
+    global variable
+    #print(p[6])
+    lval = variable.get(p[1])
+    rval = p[6]
+    lval[p[3]] = p[6];
+    variable[p[1]] = lval;
+    p[0] = p[6];
+    
+def p_expr_id_assign_list(p):
+    """
+    expr : ID ASSIGN listval
     """
     if not stack[-1]:
         return
-
+    global variable
+    lval = variable.get(p[1])
+    rval = p[3]
+    lval = rval
+    variable[p[1]] = lval;
+    p[0] = p[3]
+    
+def p_expr_listval(p):
+    '''
+    listval : ID LBRACKET expr RBRACKET
+    '''
+    if not stack[-1]:
+            return
+    global variable
+    if p[1] == None or p[3] == None:
+        return
+    
+    temp = variable.get(p[1])
+    p[0] = temp[p[3]]
+    
+def p_expr_assign_expr(p):
+    """
+    expr : lvalue ASSIGN rvalue
+          | lvalue ASSIGN rvalue SEMI
+    """
+    if not stack[-1]:
+        return
+    
     if p[3] is not None:
         p[1] = p[3]
         p[0] = p[3]
+        
+def p_exp_lvalue(p):
+    """
+    lvalue : expr
+           | ID
+           | expr '[' expr ']' 
+           | expr '[' expr ']' '[' expr ']'
+    """
+    pass
 
+def p_exp_rvalue(p):
+    """
+    rvalue : expr
+           | ID
+           | expr '[' expr ']' 
+           | expr '[' expr ']' '[' expr ']'
+    """
+    pass
 
 def p_expr_or_empty(p):
     """
@@ -486,44 +563,71 @@ def p_expr_or_empty(p):
     """
     if not stack[-1]:
         return
-
+    
     if len(p) == 2:
         p[0] = p[1]  
 
 def p_expr_linear(p):
     '''
     expr : plist
-         | ptuple
+         | ptuple  
+         | listval
     '''
+    if not stack[-1]:
+            return
     p[0] = p[1]
+
+def p_expr_listindex(p):
+    '''
+    expr : expr LBRACKET expr RBRACKET
+    '''
+    if not stack[-1]:
+            return
+    global error_semantic
+    if p[1] is None or p[3] is None:
+            error_semantic = error_semantic + 1
+            return None
+        
+    try:
+        if p[3] > len(p[1]):
+            error_semantic = error_semantic + 1
+            return
+        else:
+            p[0] = p[1][p[3]]
+            return p[1][p[3]]
+    except:
+        error_semantic = error_semantic + 1
+
+def p_expr_listindexdouble(p):
+    '''
+    expr : ID LBRACKET expr RBRACKET LBRACKET expr RBRACKET
+    '''
+    if not stack[-1]:
+            return
+    global variable
+    global error_semantic
+    if p[1] is None or p[3] is None or p[6] is None:
+            error_semantic = error_semantic + 1
+            return None
+        
+    try: 
+            temp = variable.get(p[1])
+            p[0] = temp[p[3]][p[6]]
+            return p[0]
+    except:
+        error_semantic = error_semantic + 1
 
 def p_empty(p):
      '''
      empty :
      '''
+     if not stack[-1]:
+            return
      pass
  
 def p_error(p):
     global error_semantic;
     error_semantic = 1;
-
-
-'''
-support for assignment to variables must be added
-
-support must be added for variables used in exprs. 
-For example, if x was assigned 1, then "print(x);" will print 1.
-
-If the variable has had a value assigned to it, then the value 
-should be returned. Otherwise, a "Semantic Error" should be reported and your program should stop
-
-  If the variable is not a list (or a string), or the index is not an integer, then a Semantic 
-  Error should be reported.  If the index is outside the bounds of the list, then a Semantic 
-  Error should be reported
-
-  If Statements: Consist of a keyword "if", a left parenthesis, an expr, 
-  a right parenthesis, and a block statement as the body of the If statement.
-'''
 
 parser = yacc.yacc(debuglog=log)
 def mainHW3(filepath):

@@ -1,7 +1,8 @@
 {   
-    number = 33;   
+    number = 31;   
     isPrime = 1;   
     i = 2;   
+     
     while(isPrime == 1 andalso number > i)
     {     
         if (number mod i == 0) 
@@ -9,7 +10,6 @@
             isPrime = 0;     
         }     
         i = i + 1;  
-        print(i); 
     }   
     
     if(isPrime == 1)

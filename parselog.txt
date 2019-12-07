@@ -1,291 +1,1983 @@
    yacc.py: 362:PLY: PARSE DEBUG START
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [2] and goto state 65
-   yacc.py: 506:Result : <int @ 0x10997df30> (2)
-   yacc.py: 471:Action : Reduce rule [listitem -> expr] with [2] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [10] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997e030> (10)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [[2],',',10] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [3] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997df50> (3)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [[2, 10],',',3] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997def0> (0)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [[2, 10, 3],',',0] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [[2, 10, 3, 0],',',1] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [4] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997df70> (4)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edae10>,',',4] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0, 1, 4])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [9] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997e010> (9)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edad70>,',',9] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [8] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997dff0> (8)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edae10>,',',8] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0, 1, 4, 9, 8])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [12] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997e070> (12)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edad70>,',',12] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [7] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997dfd0> (7)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edae10>,',',7] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [83] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997e950> (83)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edad70>,',',83] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [6] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997dfb0> (6)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edae10>,',',6] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6])
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [3] and goto state 59
-   yacc.py: 506:Result : <int @ 0x10997df50> (3)
-   yacc.py: 471:Action : Reduce rule [expr -> MINUS expr] with ['-',3] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997de90> (-3)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edad70>,',',-3] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [100] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997eb70> (100)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edae10>,',',100] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edad70> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [27] and goto state 117
-   yacc.py: 506:Result : <int @ 0x10997e250> (27)
-   yacc.py: 471:Action : Reduce rule [listitem -> listitem COMMA expr] with [<list @ 0x109edad70>,',',27] and goto state 64
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [plist -> LBRACKET listitem RBRACKET] with ['[',<list @ 0x109edae10>,']'] and goto state 20
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [expr -> plist] with [<list @ 0x109edae10>] and goto state 102
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['array','=',<list @ 0x109edae10>] and goto state 6
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [15] and goto state 102
-   yacc.py: 506:Result : <int @ 0x10997e0d0> (15)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['size','=',15] and goto state 6
-   yacc.py: 506:Result : <int @ 0x10997e0d0> (15)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 102
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',1] and goto state 6
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 25
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['size'] and goto state 86
-   yacc.py: 506:Result : <int @ 0x10997e0d0> (15)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr LESSTHAN expr] with [1,'<',15] and goto state 101
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 124
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['key','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET ID RBRACKET] with [None,'[','i',']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 73
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> expr MINUS expr] with [None,'-',1] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['j','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 25
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 90
-   yacc.py: 506:Result : <int @ 0x10997def0> (0)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATEREQUAL expr] with [None,'>=',0] and goto state 100
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 123
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['temp','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET ID RBRACKET] with [None,'[','j',']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['key'] and goto state 91
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [None,'>',None] and goto state 8
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 92
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> boolexpr SEMI program] with [None,';',None] and goto state 125
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 127
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifElseStart -> <empty>] with [] and goto state 133
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> BOOL] with ['False'] and goto state 60
-   yacc.py: 506:Result : <str @ 0x109ed9d70> ('False')
-   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with ['False'] and goto state 102
-   yacc.py: 506:Result : <bool @ 0x10991b5e0> (True)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['temp','=',True] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 71
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 134
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 135
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY ELSE LCURLY ifElseStart program ifEnd RCURLY] with ['if','(',None,')','{',None,None,None,'}','else','{',None,None,None,'}'] and goto state 5
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 25
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 90
-   yacc.py: 506:Result : <int @ 0x10997def0> (0)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATEREQUAL expr] with [None,'>=',0] and goto state 101
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [None] and goto state 25
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['temp'] and goto state 84
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [None,'andalso',None] and goto state 101
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 124
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 79
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 72
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [None,'+',1] and goto state 79
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET expr RBRACKET] with [None,'[',None,']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 83
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr ASSIGN expr] with [None,'=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET ID RBRACKET] with [None,'[','j',']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 73
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> expr MINUS expr] with [None,'-',1] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['j','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 25
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 90
-   yacc.py: 506:Result : <int @ 0x10997def0> (0)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATEREQUAL expr] with [None,'>=',0] and goto state 100
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 123
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['temp','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET ID RBRACKET] with [None,'[','j',']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['key'] and goto state 91
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [None,'>',None] and goto state 8
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 92
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> boolexpr SEMI program] with [None,';',None] and goto state 125
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 127
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifElseStart -> <empty>] with [] and goto state 133
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [boolexpr -> BOOL] with ['False'] and goto state 60
-   yacc.py: 506:Result : <str @ 0x109ee6070> ('False')
-   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with ['False'] and goto state 102
-   yacc.py: 506:Result : <bool @ 0x10991b5e0> (True)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['temp','=',True] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 71
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 134
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 135
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY ELSE LCURLY ifElseStart program ifEnd RCURLY] with ['if','(',None,')','{',None,None,None,'}','else','{',None,None,None,'}'] and goto state 5
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 30
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 126
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 128
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',None,')','{',None,None,None,'}'] and goto state 5
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['j'] and goto state 79
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 72
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [None,'+',1] and goto state 79
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr LBRACKET expr RBRACKET] with [None,'[',None,']'] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['key'] and goto state 83
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> expr ASSIGN expr] with [None,'=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 72
-   yacc.py: 506:Result : <int @ 0x10997df10> (1)
-   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [None,'+',1] and goto state 102
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',None] and goto state 6
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 71
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 30
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 30
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 126
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 128
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',None,')','{',None,None,None,'}'] and goto state 5
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['array'] and goto state 94
-   yacc.py: 506:Result : <list @ 0x109edae10> ([2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6,  ...)
-   yacc.py: 471:Action : Reduce rule [print_arguments -> expr] with [<list @ 0x109edae10>] and goto state 93
-   yacc.py: 506:Result : <str @ 0x109ecf7a0> ('[2, 10, 3, 0, 1, 4, 9, 8, 12, 7, 83, 6, ...)
-   yacc.py: 471:Action : Reduce rule [stmt -> PRINT LPAREN print_arguments RPAREN SEMI] with ['print','(',<str @ 0x109ecf7a0>,')',';'] and goto state 5
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 30
-   yacc.py: 548:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 30
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [1,';',None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [15,';',None] and goto state 71
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [<list @ 0x109edae10>,';',None] and goto state 4
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [31] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['number','=',31] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',1] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [2] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',2] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',2] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',2] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [2,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',3] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [3,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',3] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',3] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [3,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',4] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [4,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',4] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',4] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [3,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [4,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',5] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [5,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',5] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',5] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [5,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',6] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [6,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',6] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',6] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [6,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',7] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [7,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',7] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',7] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [3,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [7,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',8] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [8,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',8] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',8] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [7,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [8,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',9] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [9,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',9] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',9] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [4,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [9,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',10] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [10,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',10] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',10] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [10,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',11] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [11,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',11] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',11] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [9,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [11,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',12] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [12,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',12] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',12] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [7,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [12,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',13] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [13,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',13] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',13] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [5,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [13,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',14] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [14,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',14] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',14] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [3,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [14,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',15] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [15,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',15] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',15] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [15,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd80> (16)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',16] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdd80> (16)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [16,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdd80> (16)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',16] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdd80> (16)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',16] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdd60> (15)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [15,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdd80> (16)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [16,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdda0> (17)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',17] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdda0> (17)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [17,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdda0> (17)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',17] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdda0> (17)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',17] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdd40> (14)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [14,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdda0> (17)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [17,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbddc0> (18)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',18] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbddc0> (18)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [18,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbddc0> (18)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',18] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbddc0> (18)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',18] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdd20> (13)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [13,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbddc0> (18)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [18,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdde0> (19)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',19] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdde0> (19)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [19,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdde0> (19)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',19] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdde0> (19)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',19] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdd00> (12)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [12,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdde0> (19)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [19,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde00> (20)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',20] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbde00> (20)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [20,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbde00> (20)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',20] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbde00> (20)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',20] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdce0> (11)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [11,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde00> (20)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [20,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde20> (21)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',21] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbde20> (21)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [21,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbde20> (21)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',21] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbde20> (21)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',21] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdcc0> (10)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [10,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde20> (21)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [21,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde40> (22)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',22] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbde40> (22)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [22,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbde40> (22)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',22] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbde40> (22)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',22] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdca0> (9)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [9,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde40> (22)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [22,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde60> (23)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',23] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbde60> (23)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [23,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbde60> (23)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',23] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbde60> (23)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',23] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc80> (8)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [8,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde60> (23)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [23,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde80> (24)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',24] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbde80> (24)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [24,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbde80> (24)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',24] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbde80> (24)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',24] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc60> (7)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [7,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbde80> (24)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [24,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdea0> (25)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',25] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdea0> (25)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [25,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdea0> (25)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',25] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdea0> (25)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',25] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc40> (6)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [6,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdea0> (25)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [25,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdec0> (26)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',26] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdec0> (26)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [26,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdec0> (26)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',26] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdec0> (26)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',26] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc20> (5)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [5,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdec0> (26)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [26,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdee0> (27)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',27] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdee0> (27)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [27,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdee0> (27)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',27] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdee0> (27)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',27] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdc00> (4)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [4,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdee0> (27)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [27,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf00> (28)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',28] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdf00> (28)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [28,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdf00> (28)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',28] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdf00> (28)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',28] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdbe0> (3)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [3,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf00> (28)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [28,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf20> (29)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',29] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdf20> (29)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [29,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdf20> (29)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',29] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdf20> (29)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',29] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdbc0> (2)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [2,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf20> (29)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [29,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf40> (30)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',30] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdf40> (30)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [30,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdf40> (30)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',30] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',True] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <int @ 0x107dbdf40> (30)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [31,'mod',30] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdb80> (0)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',0] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf40> (30)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [30,'+',1] and goto state 101
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',31] and goto state 5
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [31,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',True,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [True] and goto state 98
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 80
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 87
+   yacc.py: 506:Result : <int @ 0x107dbdf60> (31)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr GREATER expr] with [31,'>',31] and goto state 56
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 471:Action : Reduce rule [expr -> boolexpr] with [False] and goto state 80
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr ANDALSO expr] with [True,'andalso',False] and goto state 99
+   yacc.py: 506:Result : <bool @ 0x107d5b290> (False)
+   yacc.py: 474:Action : Reduce rule [whileStart -> <empty>] with [] and goto state 135
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['number'] and goto state 98
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 76
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> expr MOD expr] with [None,'mod',None] and goto state 98
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 84
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [None,'==',None] and goto state 97
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [0] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['isPrime','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY] with ['if','(',None,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['i'] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 70
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> expr PLUS expr] with [None,'+',None] and goto state 101
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID ASSIGN expr] with ['i','=',None] and goto state 5
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 69
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [None,';',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 142
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [whileEnd -> <empty>] with [] and goto state 147
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> WHILE LPAREN boolexpr RPAREN LCURLY whileStart program whileEnd RCURLY] with ['while','(',False,')','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> ID] with ['isPrime'] and goto state 98
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [expr -> INT] with [1] and goto state 84
+   yacc.py: 506:Result : <int @ 0x107dbdba0> (1)
+   yacc.py: 471:Action : Reduce rule [boolexpr -> expr EQUAL expr] with [1,'==',1] and goto state 97
+   yacc.py: 506:Result : <bool @ 0x107d5b270> (True)
+   yacc.py: 474:Action : Reduce rule [ifStart -> <empty>] with [] and goto state 134
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> STRING] with [<str @ 0x1083002b0>] and goto state 91
+   yacc.py: 506:Result : <str @ 0x1082fcc70> ('isPrime is true')
+   yacc.py: 471:Action : Reduce rule [print_arguments -> expr] with [<str @ 0x1082fcc70>] and goto state 90
+   yacc.py: 506:Result : <str @ 0x1082fcc70> ('isPrime is true')
+   yacc.py: 471:Action : Reduce rule [stmt -> PRINT LPAREN print_arguments RPAREN SEMI] with ['print','(',<str @ 0x1082fcc70>,')',';'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 26
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 141
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 146
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifElseStart -> <empty>] with [] and goto state 156
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [expr -> STRING] with [<str @ 0x1083002b0>] and goto state 91
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [print_arguments -> expr] with [None] and goto state 90
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> PRINT LPAREN print_arguments RPAREN SEMI] with ['print','(',None,')',';'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 26
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 157
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [ifEnd -> <empty>] with [] and goto state 158
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [stmt -> IF LPAREN boolexpr RPAREN LCURLY ifStart program ifEnd RCURLY ELSE LCURLY ifElseStart program ifEnd RCURLY] with ['if','(',True,')','{',None,None,None,'}','else','{',None,None,None,'}'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 474:Action : Reduce rule [program -> <empty>] with [] and goto state 26
+   yacc.py: 548:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> stmt program] with [None,None] and goto state 69
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [2,';',None] and goto state 69
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [1,';',None] and goto state 69
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 471:Action : Reduce rule [program -> expr SEMI program] with [31,';',None] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
    yacc.py: 471:Action : Reduce rule [start -> LCURLY program RCURLY] with ['{',None,'}'] and goto state 1
-   yacc.py: 506:Result : <NoneType @ 0x109934128> (None)
-   yacc.py: 571:Done   : Returning <NoneType @ 0x109934128> (None)
+   yacc.py: 506:Result : <NoneType @ 0x107d73db8> (None)
+   yacc.py: 571:Done   : Returning <NoneType @ 0x107d73db8> (None)
    yacc.py: 572:PLY: PARSE DEBUG END

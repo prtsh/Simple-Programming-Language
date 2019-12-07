@@ -1,0 +1,15 @@
+
+#How to run -
+$python3 sbml.py <inputfile>
+
+<inputfile> file is your program
+
+#Files included -
+1. sbml.py, main file
+2. sbmllexer.py, lexer file, contains token definitions
+3. sbmlparser.py, parser file, containes grammer rules
+
+Parser is not 100% bug free and many production rules are created 
+in a adhoc way.
+
+
